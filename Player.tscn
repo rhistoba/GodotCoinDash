@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/player/run/player-run-6.png" type="Texture" id=1]
 [ext_resource path="res://assets/player/run/player-run-2.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://assets/player/run/player-run-4.png" type="Texture" id=10]
 [ext_resource path="res://assets/player/idle/player-idle-3.png" type="Texture" id=11]
 [ext_resource path="res://assets/player/run/player-run-1.png" type="Texture" id=12]
+[ext_resource path="res://Player.gd" type="Script" id=13]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -35,10 +36,12 @@ animations = [ {
 extents = Vector2( 9.53157, 10.5578 )
 
 [node name="Player" type="Area2D"]
+script = ExtResource( 13 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "idle"
+frame = 1
 playing = true
 offset = Vector2( 0, -5 )
 
