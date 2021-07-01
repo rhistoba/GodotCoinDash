@@ -37,11 +37,12 @@ extents = Vector2( 9.53157, 10.5578 )
 
 [node name="Player" type="Area2D"]
 script = ExtResource( 13 )
+speed = 350
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "idle"
-frame = 1
+frame = 2
 playing = true
 offset = Vector2( 0, -5 )
 
