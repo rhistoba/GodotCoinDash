@@ -33,6 +33,7 @@ func spawn_coins():
 		$CoinContainer.add_child(c)
 		c.screensize = screensize
 		c.position = Vector2(rand_range(0, screensize.x), rand_range(0, screensize.y))
+	$LevelSound.play()
 
 func game_over():
 	playing = false
@@ -41,6 +42,7 @@ func game_over():
 		coin.queue_free()
 	$HUD.show_game_over()
 	$Player.die()
+	$EndSound.play()
 
 func _process(delta):
 	if playing and $CoinContainer.get_child_count() == 0:
@@ -61,3 +63,4 @@ func _on_Player_hurt():
 func _on_Player_pickup():
 	score += 1
 	$HUD.update_score(score)
+	$CoinSound.play()
