@@ -21,14 +21,14 @@ animations = [ {
 "name": "idle",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 10 ), ExtResource( 4 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "run",
-"speed": 8.0
-}, {
 "frames": [ ExtResource( 9 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "hurt",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 10 ), ExtResource( 4 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "run",
 "speed": 8.0
 } ]
 
@@ -42,7 +42,7 @@ speed = 350
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "idle"
-frame = 2
+frame = 3
 playing = true
 offset = Vector2( 0, -5 )
 
