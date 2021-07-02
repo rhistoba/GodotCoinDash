@@ -33,13 +33,14 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 9.53157, 10.5578 )
+extents = Vector2( 17.7308, 21.476 )
 
 [node name="Player" type="Area2D"]
 script = ExtResource( 13 )
 speed = 350
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "idle"
 frame = 3
