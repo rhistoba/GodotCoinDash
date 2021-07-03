@@ -3,7 +3,7 @@ extends Area2D
 var screensize = Vector2()
 
 func pickup():
-	monitoring = false
+	set_deferred("monitaring", false)
 	$Tween.start()
 
 func _ready():

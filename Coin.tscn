@@ -28,6 +28,9 @@ radius = 24.5096
 "coins",
 ]]
 script = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
@@ -37,6 +40,7 @@ playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
+one_way_collision_margin = 0.0
 
 [node name="Tween" type="Tween" parent="."]
 
