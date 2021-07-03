@@ -25,7 +25,13 @@ func _ready():
 		Tween.TRANS_QUAD,
 		Tween.EASE_IN_OUT
 	)
+	$AnimationTimer.wait_time = rand_range(2, 5)
+	$AnimationTimer.start()
 
 
 func _on_Tween_tween_completed(object, key):
 	queue_free()
+
+func _on_AnimationTimer_timeout():
+	$AnimatedSprite.frame = 0
+	$AnimatedSprite.play()
